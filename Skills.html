@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Aye Chan Moe" />
+        <meta name="author" content="Aye Chan Moe" />
+        <title>Aye Chan Moe</title>
+        <link rel="stylesheet" href="assets/styles/mystyle.css" />
+        <link rel="stylesheet" href="assets/styles/darkmode.css" />
+    </head>
+    <body>
+        <div id="wrapper">
+            <div class="bg-wrapper">
+                
+            </div>
+            <div class="content">
+                <div class="hamburger-menu" onclick="toggleSideNavMobile()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <div class="navContainer">
+                    <p>Skills</p>
+                </div>
+                <div class="side-nav">
+                    <br>
+                    <img class="profile" src="./assets/images/profile.jpg" alt="Profile">
+                    <h3>HELLO!</h3>
+                    <p class="plan">Welcome to my personal site.</p>
+                    <div class="nav-items">
+                    	<div class="nav-item" onclick="window.open('About.html','_self')">
+                            <img src="./assets/images/about.png" alt="About">
+                            <img class="dark" src="./assets/images/about_active.png" alt="About">
+                            <p>About</p>
+                        </div>
+                        <div class="nav-item active" onclick="window.open('Skills.html','_self')">
+                            <img src="./assets/images/skills.png" alt="Skills">
+                            <img class="dark" src="./assets/images/skills_active.png" alt="Skills">
+                            <p>Skills</p>
+                        </div>
+                        <div class="nav-item collapse" onclick="toggleCollapseSetting(event)">
+                            <div class="nav-collapse-item">
+                                <img class="dark" src="./assets/images/exp_active.png" alt="Experience">
+                                <img src="./assets/images/exp.png" alt="Experience">
+                                <div class="nav-collapse">
+                                    <div class="nav-collapse-btn" onclick="toggleCollapseSetting(event)">
+                                        <p>Experience</p>
+                                        <img class="down-dark" src="./assets/images/dropDownGrey.png" alt="DropDown"  onclick="toggleCollapseSetting(event)">
+                                        <img class="close-dark" src="./assets/images/dropDownCloseGrey.png" alt="DropDown" onclick="toggleCollapseSetting(event)">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="Work" class="nav-collapse-field" onclick="window.open('WorkExp.html','_self')">Work</div>
+                            <div id="Projects" class="nav-collapse-field" onclick="window.open('ProjectsExp.html','_self')">Projects</div>
+                        </div>
+                        <div class="nav-item" onclick="window.open('Resume_CV.html','_self')">
+                            <img class="dark" src="./assets/images/resume_active.png" alt="Resume">
+                            <img src="./assets/images/resume.png" alt="Resume">
+                            <p>Resume/CV</p>
+                        </div>
+                    </div>
+                    <div class="nav-footer">
+                        <div class="contacts">
+                            <a href="mailto:chanmoelay333@gmail.com"><img src="./assets/images/email.png" alt="Email"></a>
+                            <a href="whatsapp://send?phone=6594841779"><img src="./assets/images/whatsapp.png" alt="WhatsApp"></a>
+                            <a href="https://www.linkedin.com/in/aye-chan-moe-0647a527b/"><img src="./assets/images/linkedin.png" alt="LinkedIn"></a>
+                            <a href="https://github.com/AyeChanMoe4701"><img src="./assets/images/github.png" alt="Github"></a>
+                        </div>
+                        <label class="switch">
+                            <input class="switch__input" type="checkbox" role="switch" onclick="darkmode()">
+                            <svg class="switch__icon switch__icon--light" viewBox="0 0 12 12" width="12px" height="12px" aria-hidden="true">
+                                <g fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round">
+                                    <circle cx="6" cy="6" r="2" />
+                                    <g stroke-dasharray="1.5 1.5">
+                                        <polyline points="6 10,6 11.5" transform="rotate(0,6,6)" />
+                                        <polyline points="6 10,6 11.5" transform="rotate(45,6,6)" />
+                                        <polyline points="6 10,6 11.5" transform="rotate(90,6,6)" />
+                                        <polyline points="6 10,6 11.5" transform="rotate(135,6,6)" />
+                                        <polyline points="6 10,6 11.5" transform="rotate(180,6,6)" />
+                                        <polyline points="6 10,6 11.5" transform="rotate(225,6,6)" />
+                                        <polyline points="6 10,6 11.5" transform="rotate(270,6,6)" />
+                                        <polyline points="6 10,6 11.5" transform="rotate(315,6,6)" />
+                                    </g>
+                                </g>
+                            </svg>
+                            <svg class="switch__icon switch__icon--dark" viewBox="0 0 12 12" width="12px" height="12px" aria-hidden="true">
+                                <g fill="none" stroke="#fff" stroke-width="1" stroke-linejoin="round" transform="rotate(-45,6,6)">
+                                    <path d="m9,10c-2.209,0-4-1.791-4-4s1.791-4,4-4c.304,0,.598.041.883.105-.995-.992-2.367-1.605-3.883-1.605C2.962.5.5,2.962.5,6s2.462,5.5,5.5,5.5c1.516,0,2.888-.613,3.883-1.605-.285.064-.578.105-.883.105Z"/>
+                                </g>	
+                            </svg>
+                        </label>
+                    </div>
+                    <div class="collapseBtn active" >
+                        <img class="collapseClose" src="./assets/images/collapseClose.png" alt="collapse" onclick="toggleSideNav()">
+                        <img class="collapseOpen" src="./assets/images/collapseOpen.png" alt="collapse" onclick="toggleSideNav()">
+                    </div>
+                </div>
+                <div class="main-field">
+                    
+                </div>
+                <div class="overlay"></div>
+            </div>
+
+        <script>
+            var resizefunc = [];
+        </script>
+    </body>
+    <script type="text/javascript">
+        function toggleSideNavMobile() {
+            var sideNav = document.querySelector(".side-nav");
+            var hamburgerMenu = document.querySelector(".hamburger-menu");
+            var overlay = document.querySelector('.overlay');
+    
+            sideNav.classList.toggle("active");
+            hamburgerMenu.classList.toggle("active");
+            overlay.style.display = overlay.style.display === 'block' ? 'none' : 'block';
+            content.classList.toggle('mobile-active');
+        }
+        function toggleSideNav(){
+            let sideNav = document.getElementsByClassName("side-nav")[0];
+            let mainField = document.getElementsByClassName("main-field")[0];
+            let num = document.getElementsByClassName("num")[0];
+            if(sideNav.classList.contains("nav-close")){
+                sideNav.classList.remove("nav-close");
+                mainField.style.width="80vw";
+                num.style.left="5vw";
+            }
+            else{
+                sideNav.classList.add("nav-close");
+                mainField.style.width="95vw";
+                num.style.left="8vw";
+            }
+        }
+        function toggleCollapseSetting(e){
+            e.stopPropagation();
+            let collapse = document.getElementsByClassName("collapse")[0];
+            if(collapse.classList.contains("collapse-open")){
+                collapse.classList.remove("collapse-open");
+            }
+            else{
+                collapse.classList.add("collapse-open");
+            }
+        }
+        function darkmode(){
+            const switchInput = document.querySelector('.switch__input');
+            const navContainer = document.querySelector('.navContainer');
+            const side_nav = document.querySelector('.side-nav');
+            const bg = document.querySelector('.bg-wrapper');
+
+            if (switchInput.checked) {
+                navContainer.classList.add('checked');
+                side_nav.classList.add('checked');
+                bg.classList.add('checked');
+            }
+            else {
+                navContainer.classList.remove('checked');
+                side_nav.classList.remove('checked');
+                bg.classList.remove('checked');
+            }
+        }
+        function setDarkModeFromStorage() {
+            const prefersDarkMode = sessionStorage.getItem('darkMode') === 'true';
+            const darkModeSwitch = document.querySelector('.switch__input');
+            darkModeSwitch.checked = prefersDarkMode;
+            darkmode();
+        }
+        
+        // Add event listener for changes in dark mode switch
+        document.querySelector('.switch__input').addEventListener('change', function() {
+            const darkModeSwitch = document.querySelector('.switch__input');
+            sessionStorage.setItem('darkMode', darkModeSwitch.checked);
+            darkmode();
+        });
+        
+        // Call setDarkModeFromStorage() initially to set the initial state
+        setDarkModeFromStorage();
+    </script>
+</html>
